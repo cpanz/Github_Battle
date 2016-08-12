@@ -5,12 +5,13 @@ var
 
 var
   UserDetails = require('./UserDetails'),
-  UserDetailsWrapper = require('./UserDetailsWrapper');
+  UserDetailsWrapper = require('./UserDetailsWrapper'),
+  Jumbotron = require('./Jumbotron');
 
 function BattleUI(props) {
   return props.isLoading === true
     ? <p>Loading...</p>
-    : <div className='jumbotron col-sm-12 text-center'>
+    : <Jumbotron>
         <h1>Confirm Player</h1>
         <div className='col-md-8 col-sm-offset-2'>
           <UserDetailsWrapper header='Player One'>
@@ -32,7 +33,7 @@ function BattleUI(props) {
             </Link>
           </div>
         </div>
-      </div>
+      </Jumbotron>
 }
 
 BattleUI.propTypes = {
