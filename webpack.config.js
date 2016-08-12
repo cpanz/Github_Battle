@@ -2,6 +2,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
+  devtoo: 'source-map',
   entry: [
     './app/index.js'
   ],
