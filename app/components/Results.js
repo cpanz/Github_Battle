@@ -38,7 +38,7 @@ function Results (props) {
     Winner = props.scores[0] > props.scores[1] ? 0 : 1,
     Loser = Winner === 1 ? 0 : 1;
   return (
-    <Jumbotron className='jumbotron col-sm-12 text-center'>
+    <Jumbotron>
       <h1>Results</h1>
       <div className='col-sm-8 col-sm-offset-2'>
         <UserDetailsWrapper header='Winner'>
