@@ -6,11 +6,12 @@ var
 var
   UserDetails = require('./UserDetails'),
   UserDetailsWrapper = require('./UserDetailsWrapper'),
-  Jumbotron = require('./Jumbotron');
+  Jumbotron = require('./Jumbotron'),
+  Loading = require('./Loading');
 
 function BattleUI(props) {
   return props.isLoading === true
-    ? <p>Loading...</p>
+    ? <Loading speed={800} text='Waiting' />
     : <Jumbotron>
         <h1>Confirm Player</h1>
         <div className='col-md-8 col-sm-offset-2'>

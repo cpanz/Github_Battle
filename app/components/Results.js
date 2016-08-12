@@ -6,12 +6,13 @@ var
 var
   UserDetails = require('./UserDetails'),
   UserDetailsWrapper = require('./UserDetailsWrapper'),
-  Jumbotron = require('./Jumbotron');
+  Jumbotron = require('./Jumbotron'),
+  Loading = require('./Loading');
 
 function StartOver() {
   return (
     <div className='col-sm-12'>
-      <Link to='/playersInfo'>
+      <Link to='/playerOne'>
         <button type='button'className='btn btn-lg btn-danger'>Start Over</button>
       </Link>
     </div>
@@ -21,7 +22,7 @@ function StartOver() {
 function Results (props) {
   if (props.isLoading) {
     return (
-      <p>Loading...</p>
+      <Loading text='One Moment' speed={200} />
     )
   }
 
